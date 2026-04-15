@@ -10,16 +10,17 @@ public interface StudentService {
 
     List<Student> saveAllStudents(List<Student> students);
 
-    Student getStudentById(Long id);
-
     List<Student> getAllStudents();
 
-    Student updateStudent(Long id, Student updatedStudent);
+    Student getStudentById(Long id);
 
     String deleteStudent(Long id);
 
     String deleteAllStudents();
 
+    Student updateStudent(Long id, Student student);
+
+    List<Student> getStudentsByGrade(String grade);
 
 
 }

@@ -47,6 +47,11 @@ public class StudentController {
         return studentService.getAllStudents();
     }
 
+    @GetMapping("/grade/{grade}")
+    public List<Student> fetchStudentsByGrade(@PathVariable String grade) {
+        return studentService.getStudentsByGrade(grade);
+    }
+
     @PostMapping("/saveAll")
     public List<Student> saveAllStudents(@RequestBody List<Student> students) {
         return studentService.saveAllStudents(students);

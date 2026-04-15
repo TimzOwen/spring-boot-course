@@ -1,6 +1,5 @@
 package com.timzowen.student.demo.service.impl;
 
-
 import com.timzowen.student.demo.model.Student;
 import com.timzowen.student.demo.repository.StudentRepository;
 import com.timzowen.student.demo.service.StudentService;
@@ -16,7 +15,6 @@ public class StudentServiceImpl implements StudentService {
     public StudentServiceImpl(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
-
 
     public Student saveStudent(Student student) {
         return studentRepository.save(student);
@@ -49,5 +47,10 @@ public class StudentServiceImpl implements StudentService {
         existingStudent.setName(updatedStudent.getName());
         existingStudent.setGrade(updatedStudent.getGrade());
         return studentRepository.save(existingStudent);
+    }
+
+    @Override
+    public List<Student> getStudentsByGrade(String grade) {
+        return studentRepository.getStudentByGrade(grade);
     }
 }

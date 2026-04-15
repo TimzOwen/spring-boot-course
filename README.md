@@ -5,7 +5,7 @@ A Spring Boot RESTful API for managing student records. This project demonstrate
 ## Features
 
 - **Create**: Add a single student or multiple students at once.
-- **Read**: Retrieve a student by ID or list all students.
+- **Read**: Retrieve a student by ID, list all students, or filter by grade.
 - **Update**: Modify existing student details.
 - **Delete**: Remove a specific student by ID or clear the entire database.
 
@@ -65,6 +65,7 @@ The API will be accessible at `http://localhost:8080`.
 | POST | `/api/v1/students/saveAll` | Save a list of students |
 | GET | `/api/v1/students/get/{id}` | Get student by ID |
 | GET | `/api/v1/students/getAll` | Get all students |
+| GET | `/api/v1/students/grade/{grade}` | Get students by grade |
 | PUT | `/api/v1/students/update/{id}` | Update an existing student |
 | DELETE | `/api/v1/students/delete/{id}` | Delete a student by ID |
 | DELETE | `/api/v1/students/deleteAll` | Delete all students |
