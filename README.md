@@ -1,4 +1,4 @@
-# Student Management System
+# Spring Boot Rest API 
 
 A Spring Boot RESTful API for managing student records. This project demonstrates basic CRUD operations using Spring Data JPA and MySQL.
 
