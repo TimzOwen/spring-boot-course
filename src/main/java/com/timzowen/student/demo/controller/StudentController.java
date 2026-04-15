@@ -52,4 +52,9 @@ public class StudentController {
         return studentService.saveAllStudents(students);
     }
 
+    @GetMapping("/grade/{grade}")
+    public List<Student> getStudentByGrade(@PathVariable String grade) {
+        return studentService.getStudentByGrade(grade);
+    }
+
 }

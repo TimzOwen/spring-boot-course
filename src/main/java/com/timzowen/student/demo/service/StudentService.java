@@ -20,6 +20,5 @@ public interface StudentService {
 
     String deleteAllStudents();
 
-
-
+    List<Student> getStudentByGrade(String grade);
 }

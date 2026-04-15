@@ -50,4 +50,9 @@ public class StudentServiceImpl implements StudentService {
         existingStudent.setGrade(updatedStudent.getGrade());
         return studentRepository.save(existingStudent);
     }
+
+    @Override
+    public List<Student> getStudentByGrade(String grade) {
+        return studentRepository.findByGrade(grade);
+    }
 }
